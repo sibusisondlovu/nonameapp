@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <include
+        android:id="@+id/activity_main_toolbar"
+        layout="@layout/toolbar"/>
+
+    <TextView
+        android:layout_below="@id/activity_main_toolbar"
+        android:id="@+id/activity_main_textView"
+        android:text="Hampers"
+        android:textSize="22sp"
+        android:layout_margin="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/activity_main_textView"
+        android:visibility="gone"
+        android:id="@+id/main_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:id="@+id/main_progressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+
+    <TextView
+        android:textSize="22sp"
+        android:textAlignment="center"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:id="@+id/main_textView"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:id="@+id/main_llNoCombo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textAlignment="center"
+            android:text="No hampers loaded. Click Load hampers to start loading"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:text="Load Hampers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:onClick="openLoadHamperScreen"
+        android:id="@+id/main_fab_loadHamper"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_main_toolbar"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:src="@drawable/icon_load" />
+
+
+</RelativeLayout>
+

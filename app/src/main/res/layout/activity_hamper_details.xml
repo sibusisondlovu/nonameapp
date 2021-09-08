@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.HamperDetailsActivity">
+
+    <LinearLayout
+        android:background="@color/primaryColor"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:id="@+id/activity_hamper_details_iconBack"
+            android:src="@drawable/icon_back"
+            android:layout_width="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_height="40dp"
+            app:tint="#fff" />
+
+        <TextView
+            android:id="@+id/activity_hamper_details_tvToolbarTitle"
+            android:layout_marginStart="10dp"
+            android:text="Hamper Name"
+            android:textColor="#fff"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:src="@drawable/icon_edit"
+            android:layout_width="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_height="40dp"
+            app:tint="#fff" />
+
+        <ImageView
+            android:id="@+id/activity_hamper_details_iconDelete"
+            android:src="@drawable/icon_delete"
+            android:layout_width="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_height="40dp"
+            app:tint="#fff" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/activity_hamper_details_ivHamperImage"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/default_hamper"
+        android:scaleType="fitXY"
+        android:layout_width="300dp"
+        android:layout_height="250dp" />
+
+    <TextView
+        android:text="Name"
+        android:textSize="22sp"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:enabled="false"
+        android:id="@+id/activity_hamper_details_etHamperName"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="Contents"
+        android:textSize="22sp"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:enabled="false"
+        android:id="@+id/activity_hamper_details_etHamperContents"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:text="Price"
+        android:textSize="22sp"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:enabled="false"
+        android:id="@+id/activity_hamper_details_etHamperPrice"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:enabled="false" 
+        android:layout_gravity="center_horizontal"
+        android:text="UPDATE"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
